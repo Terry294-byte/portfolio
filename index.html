@@ -51,7 +51,7 @@
                     <div class="tab-contents active-tab" id="Skills">
                         <ul>
                         <li><span>UI/UX</span><br>Design Web/App Interfaces <li>
-                            <li><span>Web Development</span><br>Design Web/App Development</li>
+                            <li><span>Software Development</span><br>Design Web/App Development</li>
                             <li><span>App Development</span><br>Design Web/App Building Anroid apps</li>
                             
                         
@@ -82,18 +82,42 @@
             </div>
         </div>
     </div>
-    <script>
-        var tablinks = document.getElementByClassName("tab=links");
-        var tabcontents = document.getElementByClassName("tab-contents");
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat earum vel dignissimos incidunt quisquam, atque blanditiis officia porro reprehenderit amet magni reiciendis quis ducimus ad eaque asperiores est itaque consectetur?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero commodi officia, praesentium explicabo aut dolore rerum cumque vel omnis delectus laboriosam quasi necessitatibus enim itaque recusandae, iusto ipsam, voluptas exercitationem.
+                    Labore doloribus quos culpa sed magnam ipsum animi nisi, praesentium, fugiat cupiditate officia dolorem ea aliquam reprehenderit modi recusandae laboriosam molestiae nihil nulla excepturi necessitatibus iusto, veritatis velit! Possimus, quod.</p>
+                </div>
 
-        function opentab (tabname){
-            for(tablink of tablinks){
+            </div>
+
+        </div>
+    </div>
+
+    <!-----services-->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname) {
+            for (let tablink of tablinks) {
                 tablink.classList.remove("active-link");
             }
-            for(tabcontent of tabcontents){
+            for (let tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab");
             }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
     </script>
+    
 </body>
 </html>

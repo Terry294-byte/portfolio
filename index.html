@@ -23,7 +23,7 @@
                 </ul>
             </nav>
             <div class="header-text">
-            <p>UI DEesigner</p>
+            <p>UI Designer</p>
             <h1>Hi, I'm <span>Terry</span><br>Williams From Kenya</h1>
         </div>
             <div class="hero-image">
@@ -44,16 +44,56 @@
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum magnam reiciendis quisquam fuga sit dolores deserunt, quidem eos perspiciatis, voluptas sunt, delectus dicta veniam quibusdam aliquid soluta error laborum perferendis?
                     Modi placeat, harum vel ipsum tempore, aspernatur ea doloremque blanditiis rerum iure eos corrupti? Totam ea sapiente enim quaerat doloribus impedit similique porro eius corporis neque, maxime debitis aspernatur distinctio!</p>
                     <div class="tab-titles">
-                        <p class="tab-links">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
                     </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                        <li><span>UI/UX</span><br>Design Web/App Interfaces <li>
+                            <li><span>Web Development</span><br>Design Web/App Development</li>
+                            <li><span>App Development</span><br>Design Web/App Building Anroid apps</li>
+                            
+                        
+                        </ul>
+                        
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>2020-2022</span><br>Worked as a Declarant</li>
+                        <li><span>2022-2023</span><br>Worked as a Graphics Designer </li>
+                        <li><span>2023-2024</span><br>Worked as a Software Designer </li>
+
+                    </ul>
                 </div>
-<
+                    <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>Diploma in Software Development</span><br>Institute Of Software Development</li>
+                        <li><span>Certificate in Software Development</span><br>Institute Of Software Development</li>
+                        <li><span>Certificate in EAC</span><br>Kenya School of Revenue Administration</li>
+                        <li><span>Certificate in KCSE</span><br>Loreto Convent Valley Road</li>
+
+                    </ul>
+                </div>
+                
+                </div>
+
                 
             </div>
         </div>
     </div>
-    
+    <script>
+        var tablinks = document.getElementByClassName("tab=links");
+        var tabcontents = document.getElementByClassName("tab-contents");
+
+        function opentab (tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+        }
+    </script>
 </body>
 </html>

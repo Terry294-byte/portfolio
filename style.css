@@ -27,7 +27,7 @@ nav{
 }
 .logo{
     width: 100px;
-    margin-left: -100px;
+
 
 }
 nav ul li{
@@ -71,8 +71,8 @@ nav ul li a:hover::after{
 
 .hero-image {
     position: absolute;
-    right: -5%; /* Align image to the right */
-    top: 70%; /* Vertically center */
+    right: 5%; /* Align image to the right */
+    top: 60%; /* Vertically center */
     transform: translateY(-50%); /* Adjust for centering */
 }
 

@@ -71,15 +71,15 @@ nav ul li a:hover::after{
 
 .hero-image {
     position: absolute;
-    right: 5%; /* Align image to the right */
-    top: 60%; /* Vertically center */
-    transform: translateY(-50%); /* Adjust for centering */
+    right: 5%; 
+    top: 60%; 
+    transform: translateY(-50%); 
 }
 
 .hero-image img {
-    max-width: 400px; /* Adjust as needed */
+    max-width: 400px; 
     height: auto;
-    border-radius: 10px; /* Optional for rounded corners */
+    border-radius: 10px; 
 }
 /*-----about-----*/
 #about{

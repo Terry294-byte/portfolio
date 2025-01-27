@@ -13,11 +13,11 @@
             <nav>
                 <img src="images/tlogo.png" class="logo"> 
                 <ul id="sidemenu">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
 
 
                         
@@ -27,8 +27,8 @@
                 <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-            <p>UI Designer</p>
-            <h1>Hi, I'm <span>Terry</span><br>Williams From Kenya</h1>
+            <p> Designer</p>
+            <h1>Hi, I'm <span>Terry</span><br>Daniels From Kenya</h1>
         </div>
             <div class="hero-image">
                 <img src="images/backgrimg.png.png">
@@ -45,8 +45,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum magnam reiciendis quisquam fuga sit dolores deserunt, quidem eos perspiciatis, voluptas sunt, delectus dicta veniam quibusdam aliquid soluta error laborum perferendis?
-                    Modi placeat, harum vel ipsum tempore, aspernatur ea doloremque blanditiis rerum iure eos corrupti? Totam ea sapiente enim quaerat doloribus impedit similique porro eius corporis neque, maxime debitis aspernatur distinctio!</p>
+                    <p>Terry is a dynamic software developer known for combining technical brilliance with a creative flair. With a knack for problem-solving, Terry transforms complex challenges into streamlined solutions, often crafting elegant code that's both efficient and scalable. Beyond technical skills, Terry is a natural collaborator, fostering innovation through teamwork and clear communication. Whether building intuitive user interfaces, optimizing backend systems, or diving into cutting-edge tech,Terry’s passion shines through</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('Experience')">Experience</p>
@@ -92,17 +91,17 @@
             <div class="services-list">
                 <div>
                     <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat earum vel dignissimos incidunt quisquam, atque blanditiis officia porro reprehenderit amet magni reiciendis quis ducimus ad eaque asperiores est itaque consectetur?</p>
+                    <p>Web design combines aesthetics and functionality to create engaging digital experiences. It focuses on creating responsive layouts that adapt seamlessly across different screen sizes and devices. Modern web design emphasizes fast loading times, intuitive navigation, and accessibility features. Designers must consider aspects like color theory, typography, white space, and visual hierarchy while ensuring the site remains user-friendly and meets current web standards. SEO optimization and performance are also crucial elements.</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
-                    <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat earum vel dignissimos incidunt quisquam, atque blanditiis officia porro reprehenderit amet magni reiciendis quis ducimus ad eaque asperiores est itaque consectetur?</p>
+                    <h2>App Design</h2>
+                    <p>Mobile app design requires a deep understanding of user behavior and platform-specific guidelines. Whether designing for iOS or Android, designers must create interfaces that feel native to each platform while maintaining brand consistency. App design prioritizes touch interactions, gesture controls, and compact layouts. Important considerations include offline functionality, push notifications, quick loading states, and efficient use of limited screen real estate.</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
                     <h2>UI Design</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat earum vel dignissimos incidunt quisquam, atque blanditiis officia porro reprehenderit amet magni reiciendis quis ducimus ad eaque asperiores est itaque consectetur?</p>
+                    <p>User Interface design creates the visual elements users interact with across digital platforms. It involves crafting consistent design systems with reusable components like buttons, forms, and navigation menus. UI designers focus on visual feedback, microinteractions, and state changes that guide users through tasks. They must balance aesthetic appeal with usability, ensuring elements are properly sized, spaced, and contrasted for optimal interaction. CopyRetryClaude can make mistakes. Please double-check responses.</p>
                     <a href="#">Learn more</a>
                 </div>
 
@@ -180,32 +179,43 @@
                 <p>Copyright &copy; Terry. Made with <i class="fas fa-heart"></i> </p>
             </div>
         </div>
-
+        <script>
+            // Get all elements with the class "tab-links" (tab buttons or links)
+            var tablinks = document.getElementsByClassName("tab-links");
+        
+            // Get all elements with the class "tab-contents" (content associated with each tab)
+            var tabcontents = document.getElementsByClassName("tab-contents");
+        
+            // Function to open a specific tab and display its content
+            function opentab(tabname) {
+                // Loop through all tab links to remove the "active-link" class from each
+                for (let tablink of tablinks) {
+                    tablink.classList.remove("active-link"); // Deactivates the previously active tab link
+                }
+        
+                // Loop through all tab contents to remove the "active-tab" class from each
+                for (let tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab"); // Hides the previously active tab content
+                }
+        
+                // Add the "active-link" class to the tab link that was clicked
+                event.currentTarget.classList.add("active-link");
+        
+                // Add the "active-tab" class to the content associated with the clicked tab
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+        
         
     
-    <script>
-        //tab links and tab contents to display once you hover
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-    
-        function opentab(tabname) {
-            for (let tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (let tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-    <script>
+       <script>
         var sidemenu = document.getElementById("sidemenu");
+
         function openmenu(){
             sidemenu.style.right = "0";//it will be visible
         }
         function closemenu(){
-            sidemenu.style.right = "-200";//not be visible
+            sidemenu.style.right = "-200px";//not be visible
         }
     </script>
     

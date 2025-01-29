@@ -387,6 +387,10 @@ nav .fas{
     display: none;
 }
 
+
+
+
+
 /*--- Responsive for Medium Screens (Max-width: 1024px) ---*/
 @media only screen and (max-width: 1024px) {
     .header-text {
@@ -426,10 +430,14 @@ nav .fas{
 }
 
 /*--- Responsive for Small Screens (Max-width: 600px) ---*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .header-text {
-        margin-top: 100%;
+        margin-top: 20%;
         font-size: 16px;
+    }
+    .hero-image{
+        position: absolute;
+        margin-left: 150px;
     }
     .header-text h1 {
         font-size: 30px;

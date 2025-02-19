@@ -42,16 +42,43 @@ nav ul li a{
     font-size: 18px;
     position: relative;
 }
-nav ul li a::after{
+nav ul li a::after {
+    /* Creates a pseudo-element after the link */
     content: '';
-    width: 0;
-    height: 3px;
-    background:red ;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
     
+    /* Initially sets the underline width to 0 (invisible) */
+    width: 0;
+    
+    /* Sets the thickness of the underline */
+    height: 3px;
+    
+    /* Sets the color of the underline */
+    background: red;
+    
+    /* Takes the element out of normal document flow */
+    position: absolute;
+    
+    /* Aligns the underline to the left edge of the link */
+    left: 0;
+    
+    /* Positions the underline 6px below the link text */
+    bottom: -6px;
+    
+    /* Adds a smooth animation that lasts 0.5 seconds */
+    /* This will apply to any property changes, in this case, the width */
+    transition: 0.5s;
+}
+
+/* Remember to add these complementary styles: */
+
+nav ul li a {
+    /* Required for absolute positioning of the pseudo-element */
+    position: relative;
+}
+
+nav ul li a:hover::after {
+    /* Makes the underline expand to full width on hover */
+    width: 100%;
 }
 nav ul li a:hover::after{
     width: 100%;
